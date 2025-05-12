@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Himachal Tours</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-2 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <img src="img/Logo.png" class="img">
+                        <!-- <span class="logo-text">Himachal</span>
+                        <span class="text-secondary">tours.org</span> -->
+                    </a>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <div class="me-4">
+                            <img src="img/call-ico.png" class="fa-shake">
+                            <!-- <i class="fas fa-phone-alt me-2 text-warning"></i> -->
+                            <span>+91 8010707888</span>
+                        </div>
+                        <div>
+                            <img src="img/mail.png" class="fa-fade">
+                            <!-- <i class="fas fa-envelope me-2 text-warning"></i> -->
+                            <span>Info@holidaytravelzone.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="banner-section py-4 position-relative">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="mb-4">
+                        <h5 class="text-white mb-0">FUN & EXCITING</h5>
+                        <div class="kullu-text">Kullu Manali</div>
+                        <div class="tour-text mb-3">Tour Package</div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="me-2">Starts</div>
+                        <div class="price-tag">₹4999/-</div>
+                        <div class="ms-2">only<br>All Inclusive</div>
+                    </div>
+                    
+                    <div class="discount-badge d-inline-block mb-4" >
+                        <div>UP TO</div>
+                        <div class="fw-bold" style="font-size: 2rem;">50%</div>
+                        <div>Off</div>
+                    </div>
+                    <div class="offer-badge d-inline-block ms-3">BIG SALE</div>
+                    <div class="special-offer ms-3">SPECIAL OFFER</div>
+                    
+                    <div class="honeymoon-text mt-4">
+                        <i class="fas fa-heart heart-icon me-2"></i> BEST HONEYMOON DESTINATION
+                    </div>
+                </div>
+                
+                <div class="col-lg-9 position-relative">
+                    <img src="manali.jpg" alt="Couple enjoying snow in Manali" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enquiry Form Overlay -->
+        <div class="position-absolute top-50 end-0 translate-middle-y me-4 d-none d-lg-block" style="z-index: 100; max-width: 350px; width: 100%;">
+            <div class="form-section">
+                <div class="form-header">
+                    <h4 class="mb-0 fa-beat"><b>GET FREE QUOTE 30% OFF</b></h4>
+                </div>
+                <div class="p-4 bg-white">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="*Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="*Mobile No." required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Travel Date (DD/MM/YY)">
+                        </div>
+                        <div class="mb-4">
+                            <select class="form-select">
+                                <option selected>No. of Person</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                           <a href="+91 8010707888"><button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container-flude">
+          <div class="row">
+              <div class="col-12">
+                  <!-- Services -->
+                  <div class="bg-white p-4 rounded shadow mb-4">
+                      <div class="row text-center">
+                          <div class="col-md-2">
+                              <div class="service-icon">≡</div>
+                              <div class="service-text">Tour Package<br>All Inclusive</div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="service-icon"><i class="fas fa-hotel fa-beat"></i></div>
+                              <div class="service-text">Hotel<br>Twin Sharing Basis</div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="service-icon"><i class="fas fa-binoculars fa-beat"></i></div>
+                              <div class="service-text">Sightseeing<br>with Private Car</div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="service-icon"><i class="fas fa-utensils fa-beat"></i></div>
+                              <div class="service-text">Food<br>Veg & Non Veg</div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="service-icon"><i class="fas fa-taxi fa-beat"></i></div>
+                              <div class="service-text">Transfers<br>in Private Car</div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="service-icon"><i class="fas fa-bus fa-beat"></i></div>
+                              <div class="service-text">Volvo<br>Bus Tickets</div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Description -->
+                 
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Form for Mobile (only shown on small screens) -->
+    <div class="d-block d-lg-none bg-light py-4">
+        <div class="container">
+            <div class="form-section">
+                <div class="form-header">
+                    <h4 class="mb-0 mt-4">GET FREE QUOTE 30% OFF</h4>
+                </div>
+                <div class="p-4 bg-white">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="*Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="*Mobile No." required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Travel Date (DD/MM/YY)">
+                        </div>
+                        <div class="mb-4">
+                            <select class="form-select">
+                                <option selected>No. of Person</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    
+    <div class="container">
+      <!-- Page Title -->
+      <h4 class="page-title" style="color: #2795D2;">Shimla Manali Tour Packages - No. 1 Destination</h4>
+      
+      <!-- Introduction Text -->
+      <div class="intro-text">
+          <span class="highlight">Kullu Manali Shimla</span> has always been a very popular destination for the old, young travelers as well as newly married couples who look for cheapest <span class="highlight">Manali tour packages & Manali Honeymoon Packages</span> to experience the perfect solitude and calmness at its best. This beautiful region is a perfect blend of historical structures, natural sceneries and gorgeous man-made wonders of the contemporary times. Thus, there are so many things to see & do in Manali. You can book the guided <span class="highlight">Manali tour packages</span> to enjoy perfect vacations or you can read this short <span class="highlight">Manali Tourism</span> guide to plan your vacation, properly.
+      </div>
+      
+      <div class="intro-text">
+          Check the below list of our tour packages for Shimla, Manali, Dharmshala & Dalhousie that are affordable and can be customized according basis the interest and preferences of each tourist. We also arrange the <span class="highlight">Shimla Manali Tour Package</span> from Bangalore, Mumbai, Gujarat, Kolkata, Kerala, Chennai, Andhra Pradesh & More..
+      </div>
+      
+      <!-- Tour Packages -->
+      <div class="row">
+          <!-- Package 1 -->
+          <div class="col-lg-4 col-md-6">
+              <div class="package-card">
+                  <div class="package-image">
+                      <img src="img/image-6.jpg" alt="Manali Volvo Tour Package">
+                      <div class="booking-label">BOOKING OPEN</div>
+                      <div class="discount-badge">50% OFF</div>
+                  </div>
+                  <div class="card-body">
+                      <h3 class="package-title">Manali Volvo Tour Packages</h3>
+                      <div class="package-duration">4N/5D | <span class="package-itinerary">2Night Manali + 2Night Volvo</span></div>
+                      
+                      <div class="service-icons">
+                          <div class="service-icon">
+                              <i class="fas fa-plane"></i>
+                              <div>Flight</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-hotel"></i>
+                              <div>Hotels</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-binoculars"></i>
+                              <div>Sightseeing</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-utensils"></i>
+                              <div>Meals</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-taxi"></i>
+                              <div>Transfers</div>
+                          </div>
+                      </div>
+                      
+                      <div class="package-inclusions">
+                          <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                          <div class="inclusion-item">Morning Tea with Breakfast and Dinner</div>
+                          <div class="inclusion-item">2 Night / 3 Days stay in respective room</div>
+                      </div>
+                      
+                      <div class="read-more">
+                          <a href="#">Read More</a>
+                      </div>
+                      
+                      <div class="price-section">
+                          <div class="price">₹ 5,249 <span class="price-suffix">ONWARDS</span></div>
+                          <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Package 2 -->
+          <div class="col-lg-4 col-md-6">
+              <div class="package-card">
+                  <div class="package-image">
+                      <img src="img/image-1.jpg" alt="Manali Honeymoon Volvo Tour Package">
+                      <div class="booking-label">BOOKING OPEN</div>
+                      <div class="discount-badge">50% OFF</div>
+                  </div>
+                  <div class="card-body">
+                      <h3 class="package-title">Manali Honeymoon Volvo Tour Packages</h3>
+                      <div class="package-duration">4N/5D | <span class="package-itinerary">2Night Manali + 2Night Volvo</span></div>
+                      
+                      <div class="service-icons">
+                          <div class="service-icon">
+                              <i class="fas fa-plane"></i>
+                              <div>Flight</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-hotel"></i>
+                              <div>Hotels</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-binoculars"></i>
+                              <div>Sightseeing</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-utensils"></i>
+                              <div>Meals</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-taxi"></i>
+                              <div>Transfers</div>
+                          </div>
+                      </div>
+                      
+                      <div class="package-inclusions">
+                          <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                          <div class="inclusion-item">Morning Tea with Breakfast & Dinner</div>
+                          <div class="inclusion-item">2 Night / 3 Days stay in respective room</div>
+                      </div>
+                      
+                      <div class="read-more">
+                          <a href="#">Read More</a>
+                      </div>
+                      
+                      <div class="price-section">
+                          <div class="price">₹ 5,749 <span class="price-suffix">ONWARDS</span></div>
+                          <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Package 3 -->
+          <div class="col-lg-4 col-md-6">
+              <div class="package-card">
+                  <div class="package-image">
+                      <img src="img/image-3.jpg" alt="Shimla Manali Volvo Tour Package">
+                      <div class="booking-label">BOOKING OPEN</div>
+                      <div class="discount-badge">50% OFF</div>
+                  </div>
+                  <div class="card-body">
+                      <h3 class="package-title">Shimla Manali Volvo Tour Package</h3>
+                      <div class="package-duration">6N/7D | <span class="package-itinerary">3Night Manali + 2Night Shimla + 1Night Volvo</span></div>
+                      
+                      <div class="service-icons">
+                          <div class="service-icon">
+                              <i class="fas fa-plane"></i>
+                              <div>Flight</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-hotel"></i>
+                              <div>Hotels</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-binoculars"></i>
+                              <div>Sightseeing</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-utensils"></i>
+                              <div>Meals</div>
+                          </div>
+                          <div class="service-icon">
+                              <i class="fas fa-taxi"></i>
+                              <div>Transfers</div>
+                          </div>
+                      </div>
+                      
+                      <div class="package-inclusions">
+                          <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                          <div class="inclusion-item">Morning Tea with Breakfast & Dinner</div>
+                          <div class="inclusion-item">05 Nights & 06 Days Hotel Stay In Respective Room</div>
+                      </div>
+                      
+                      <div class="read-more">
+                          <a href="#">Read More</a>
+                      </div>
+                      
+                      <div class="price-section">
+                          <div class="price">₹ 9,499 <span class="price-suffix">ONWARDS</span></div>
+                          <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+        <!-- Package 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="img/image-7.jpg" alt="Manali Volvo Tour Package">
+                    <div class="booking-label">BOOKING OPEN</div>
+                    <div class="discount-badge">50% OFF</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="package-title">Manali Volvo Tour Packages</h3>
+                    <div class="package-duration">4N/5D | <span class="package-itinerary">2Night Manali + 2Night Volvo</span></div>
+                    
+                    <div class="service-icons">
+                        <div class="service-icon">
+                            <i class="fas fa-plane"></i>
+                            <div>Flight</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-hotel"></i>
+                            <div>Hotels</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-binoculars"></i>
+                            <div>Sightseeing</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                            <div>Meals</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-taxi"></i>
+                            <div>Transfers</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-inclusions">
+                        <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                        <div class="inclusion-item">Morning Tea with Breakfast and Dinner</div>
+                        <div class="inclusion-item">2 Night / 3 Days stay in respective room</div>
+                    </div>
+                    
+                    <div class="read-more">
+                        <a href="#">Read More</a>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div class="price">₹ 5,249 <span class="price-suffix">ONWARDS</span></div>
+                        <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Package 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="img/image-8.jpg" alt="Manali Honeymoon Volvo Tour Package">
+                    <div class="booking-label">BOOKING OPEN</div>
+                    <div class="discount-badge">50% OFF</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="package-title">Manali Honeymoon Volvo Tour Packages</h3>
+                    <div class="package-duration">4N/5D | <span class="package-itinerary">2Night Manali + 2Night Volvo</span></div>
+                    
+                    <div class="service-icons">
+                        <div class="service-icon">
+                            <i class="fas fa-plane"></i>
+                            <div>Flight</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-hotel"></i>
+                            <div>Hotels</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-binoculars"></i>
+                            <div>Sightseeing</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                            <div>Meals</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-taxi"></i>
+                            <div>Transfers</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-inclusions">
+                        <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                        <div class="inclusion-item">Morning Tea with Breakfast & Dinner</div>
+                        <div class="inclusion-item">2 Night / 3 Days stay in respective room</div>
+                    </div>
+                    
+                    <div class="read-more">
+                        <a href="#">Read More</a>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div class="price">₹ 5,749 <span class="price-suffix">ONWARDS</span></div>
+                        <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Package 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="manali.jpg" alt="Shimla Manali Volvo Tour Package">
+                    <div class="booking-label">BOOKING OPEN</div>
+                    <div class="discount-badge">50% OFF</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="package-title">Shimla Manali Volvo Tour Package</h3>
+                    <div class="package-duration">6N/7D | <span class="package-itinerary">3Night Manali + 2Night Shimla + 1Night Volvo</span></div>
+                    
+                    <div class="service-icons">
+                        <div class="service-icon">
+                            <i class="fas fa-plane"></i>
+                            <div>Flight</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-hotel"></i>
+                            <div>Hotels</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-binoculars"></i>
+                            <div>Sightseeing</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                            <div>Meals</div>
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-taxi"></i>
+                            <div>Transfers</div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-inclusions">
+                        <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                        <div class="inclusion-item">Morning Tea with Breakfast & Dinner</div>
+                        <div class="inclusion-item">05 Nights & 06 Days Hotel Stay In Respective Room</div>
+                    </div>
+                    
+                    <div class="read-more">
+                        <a href="#">Read More</a>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div class="price">₹ 9,499 <span class="price-suffix">ONWARDS</span></div>
+                        <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <!-- Package 1 -->
+      <div class="col-lg-4 col-md-6">
+          <div class="package-card">
+              <div class="package-image">
+                  <img src="img/image-9.jpg" alt="Manali Volvo Tour Package">
+                  <div class="booking-label">BOOKING OPEN</div>
+                  <div class="discount-badge">50% OFF</div>
+              </div>
+              <div class="card-body">
+                  <h3 class="package-title">Manali Volvo Tour Packages</h3>
+                  <div class="package-duration">4N/5D | <span class="package-itinerary">2Night Manali + 2Night Volvo</span></div>
+                  
+                  <div class="service-icons">
+                      <div class="service-icon">
+                          <i class="fas fa-plane"></i>
+                          <div>Flight</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-hotel"></i>
+                          <div>Hotels</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-binoculars"></i>
+                          <div>Sightseeing</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-utensils"></i>
+                          <div>Meals</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-taxi"></i>
+                          <div>Transfers</div>
+                      </div>
+                  </div>
+                  
+                  <div class="package-inclusions">
+                      <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                      <div class="inclusion-item">Morning Tea with Breakfast and Dinner</div>
+                      <div class="inclusion-item">2 Night / 3 Days stay in respective room</div>
+                  </div>
+                  
+                  <div class="read-more">
+                      <a href="#">Read More</a>
+                  </div>
+                  
+                  <div class="price-section">
+                      <div class="price">₹ 5,249 <span class="price-suffix">ONWARDS</span></div>
+                      <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Package 2 -->
+      <div class="col-lg-4 col-md-6">
+          <div class="package-card">
+              <div class="package-image">
+                  <img src="img/image-4.jpg" alt="Manali Honeymoon Volvo Tour Package">
+                  <div class="booking-label">BOOKING OPEN</div>
+                  <div class="discount-badge">50% OFF</div>
+              </div>
+              <div class="card-body">
+                  <h3 class="package-title">Manali Honeymoon Volvo Tour Packages</h3>
+                  <div class="package-duration">4N/5D | <span class="package-itinerary">2Night Manali + 2Night Volvo</span></div>
+                  
+                  <div class="service-icons">
+                      <div class="service-icon">
+                          <i class="fas fa-plane"></i>
+                          <div>Flight</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-hotel"></i>
+                          <div>Hotels</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-binoculars"></i>
+                          <div>Sightseeing</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-utensils"></i>
+                          <div>Meals</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-taxi"></i>
+                          <div>Transfers</div>
+                      </div>
+                  </div>
+                  
+                  <div class="package-inclusions">
+                      <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                      <div class="inclusion-item">Morning Tea with Breakfast & Dinner</div>
+                      <div class="inclusion-item">2 Night / 3 Days stay in respective room</div>
+                  </div>
+                  
+                  <div class="read-more">
+                      <a href="#">Read More</a>
+                  </div>
+                  
+                  <div class="price-section">
+                      <div class="price">₹ 5,749 <span class="price-suffix">ONWARDS</span></div>
+                      <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Package 3 -->
+      <div class="col-lg-4 col-md-6">
+          <div class="package-card">
+              <div class="package-image">
+                  <img src="img/image-5.jpg" alt="Shimla Manali Volvo Tour Package">
+                  <div class="booking-label">BOOKING OPEN</div>
+                  <div class="discount-badge">50% OFF</div>
+              </div>
+              <div class="card-body">
+                  <h3 class="package-title">Shimla Manali Volvo Tour Package</h3>
+                  <div class="package-duration">6N/7D | <span class="package-itinerary">3Night Manali + 2Night Shimla + 1Night Volvo</span></div>
+                  
+                  <div class="service-icons">
+                      <div class="service-icon">
+                          <i class="fas fa-plane"></i>
+                          <div>Flight</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-hotel"></i>
+                          <div>Hotels</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-binoculars"></i>
+                          <div>Sightseeing</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-utensils"></i>
+                          <div>Meals</div>
+                      </div>
+                      <div class="service-icon">
+                          <i class="fas fa-taxi"></i>
+                          <div>Transfers</div>
+                      </div>
+                  </div>
+                  
+                  <div class="package-inclusions">
+                      <div class="inclusion-title">PACKAGE INCLUSION:</div>
+                      <div class="inclusion-item">Morning Tea with Breakfast & Dinner</div>
+                      <div class="inclusion-item">05 Nights & 06 Days Hotel Stay In Respective Room</div>
+                  </div>
+                  
+                  <div class="read-more">
+                      <a href="#">Read More</a>
+                  </div>
+                  
+                  <div class="price-section">
+                      <div class="price">₹ 9,499 <span class="price-suffix">ONWARDS</span></div>
+                      <button class="enquiry-btn" onclick="sendWhatsApp()">SEND ENQUIRY</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+
+  <div class="section-container">
+    <h1 class="main-heading">Customize & Book Festive</h1>
+    <h2 class="sub-heading">Shimla Kullu Manali Tour Packages</h2>
+    
+    <div class="row">
+        <!-- Benefit 1 -->
+        <div class="col-md-3 benefit-column">
+            <div class="check-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 class="benefit-title">SAVE TIME</h3>
+            <p class="benefit-description">No need to surf Multiple Sites for Manali packages, quotes, travel plans</p>
+        </div>
+        
+        <!-- Benefit 2 -->
+        <div class="col-md-3 benefit-column">
+            <div class="check-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 class="benefit-title">MULTIPLE OPTIONS</h3>
+            <p class="benefit-description">Get Multiple Itineraries & Personalised Suggestions from our Travel agents</p>
+        </div>
+        
+        <!-- Benefit 3 -->
+        <div class="col-md-3 benefit-column">
+            <div class="check-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 class="benefit-title">SAVE MONEY</h3>
+            <p class="benefit-description">Compare, Negotiate & Choose the best manali package from multiple options</p>
+        </div>
+        
+        <!-- Benefit 4 -->
+        <div class="col-md-3 benefit-column">
+            <div class="check-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 class="benefit-title">TRUSTED NETWORK</h3>
+            <p class="benefit-description">Of 500+ Hotels Reliable & Authentic Travel Guides in Himachal</p>
+        </div>
+    </div>
+    
+    <a href="#" class="cta-button">CLICK TO CUSTOMIZED SHIMLA KULLU MANALI PACKAGES</a>
+</div>
+<footer class="footer-main">
+  <div class="container">
+      <div class="row">
+          <!-- Payment Methods -->
+          <div class="col-md-4 mb-4">
+              <h3 class="footer-title">WE ACCEPT:</h3>
+              <!-- <div class="payment-icons">
+                  <img src="https://via.placeholder.com/60x30/ffffff/000000?text=VISA" alt="Visa">
+                  <img src="https://via.placeholder.com/60x30/ffffff/000000?text=MASTERCARD" alt="MasterCard">
+                  <img src="https://via.placeholder.com/60x30/ffffff/000000?text=PAYPAL" alt="PayPal">
+                  <img src="https://via.placeholder.com/60x30/ffffff/000000?text=AMEX" alt="American Express">
+                  <img src="https://via.placeholder.com/60x30/ffffff/000000?text=RUPAY" alt="RuPay">
+                  <img src="https://via.placeholder.com/60x30/ffffff/000000?text=VISA_ELECTRON" alt="Visa Electron">
+              </div> -->
+              
+              <div class="">
+                  <h3 class="footer-title">CUSTOMER SUPPORT :</h3>
+                  <div class="contact-item">
+                      <div class="contact-icon">
+                        <img src="img/call-ico.png" class="fa-shake">
+                          <!-- <i class="fas fa-phone-alt"></i> -->
+                      </div>
+                      <a href="tel:+91 8010707888" class="contact-phone">+91 8010707888</a>
+                  </div>
+                  <div class="contact-item">
+                      <div class="contact-icon">
+                        <img src="img/call-ico2.png">
+                          <!-- <i class="fas fa-envelope"></i> -->
+                      </div>
+                      <a href="tel:+91 8010707888" class="contact-phone">+91 8010707888</a>
+                  </div>
+              </div>
+          </div> 
+          
+          <!-- Most Selling Packages -->
+          <div class="col-md-4 mb-4">
+              <h3 class="footer-title">MOST SELLING PACKAGES:</h3>
+              <a href="#" class="package-link">MANALI HONEYMOON PACKAGES</a>
+              <a href="#" class="package-link">MANALI FAMILY PACKAGES</a>
+              <a href="#" class="package-link">MANALI HOLIDAY PACKAGES</a>
+              <a href="#" class="package-link">KULLU MANALI GETWAYS</a>
+              <a href="#" class="package-link">MANALI VOLVO PACKAGES</a>
+              <a href="#" class="package-link">MANALI CAR PACKAGES</a>
+              <a href="#" class="package-link">MANALI GROUP PACKAGES</a>
+          </div>
+          
+          <!-- Address -->
+          <div class="col-md-4 mb-4">
+              <h3 class="footer-title">ADDRESS:</h3>
+              <p class="address-text">
+                Office -  Delhi | Manali | Srinagar |<br>
+                Address - Lajpat Nagar- 4, New Delhi-110024
+              </p>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Copyright Section -->
+  <div class="copyright-section">
+    © Copyright 2025,All Rights Reserved || Designed and Maintained by <a href="Bhoomi Techzone Pvt. Ltd."><b style="color: white;">Bhoomi Techzone Pvt. Ltd.</b></a>
+  </div>
+  
+  <!-- Bottom Info Section -->
+  <div class="bottom-info">
+      <div class="container">
+          <p>
+              Resting in the lap of Himachal Himalayas, Shimla and Manali are two of the best hills stations in India and our tour package makes you explore the exquisiteness of both these places. From the Hadimba Temple of Manali, to the Jakhu Temple of Shimla, our 5 nights and 6 days takes you to every tourist hotspot. Further, we also make prior arrangements for your accommodation and commutation, so that your Shimla Manali Holidays are spent in peace and with happiness. Himachal Pradesh tourism draws millions of visitors who love to spend their holidays in a tranquil atmosphere and relaxing sylvan environment. With our customize package of 4 Days 3 Nights Shimla and Manali tour, explore the destinations of Delhi, Shimla and Manali which is one of the significant areas in Himachal. Explore the spectacular natural charm of this Northern State of India.
+          </p>
+      </div>
+  </div>
+</footer>
+
+    <!-- WhatsApp Button -->
+    <!-- <a href="+91 8010707888" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->
+
+    <a href="https://wa.me/+91 8010707888" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function sendWhatsApp() {
+            const phoneNumber = "+91 8010707888"; // Country code ke sath number
+            const message = "Hello, I want to enquire about your services."; // Aapka message
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank'); // Nayi tab me WhatsApp open hoga
+        }
+        </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
